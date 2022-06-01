@@ -8,10 +8,12 @@ import org.springframework.stereotype.Service;
 public class CitaMedica {
 	private LocalDateTime fechaCita;
 	
-//2)Di Inyeccion por contructor
+   //@Autowired 1)Atributos
 	private Doctor doctor;
+	//@Autowired 1)Atributos
 	private Paciente paciente;
 	
+	//2)Di Inyeccion por contructor
 	public  CitaMedica(Doctor doctor,Paciente paciente) {
 		this.doctor=doctor;
 		this.paciente=paciente;
