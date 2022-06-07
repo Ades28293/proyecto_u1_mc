@@ -20,6 +20,12 @@ public class Materia {
 		this.semestre = semestre;
 	}
 	
+	//Metodo toString
+	@Override
+	public String toString() {
+		return "Materia [nombre=" + nombre + ", semestre=" + semestre + "]";
+	}
+	
 	
 	
 	

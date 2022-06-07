@@ -10,13 +10,13 @@ public class MateriaRepositoryImpl implements IMateriaRepository {
 	@Override
 	public void insertar(Materia m) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha insertado materia");
+		System.out.println("Se ha insertado materia: "+m);
 	}
 
 	@Override
 	public Materia buscar(String nombre) {
 		// TODO Auto-generated method stub
-		System.out.println("Buscando");
+		System.out.println("Se ha buscando la materia: "+nombre );
 		Materia m = new Materia();
 		m.setNombre(nombre);
 		return m;
@@ -25,11 +25,12 @@ public class MateriaRepositoryImpl implements IMateriaRepository {
 	@Override
 	public void actualizar(Materia m) {
 		// TODO Auto-generated method stub
-		System.out.println("se ha actualizado " + m);
+		System.out.println("se ha actualizado la materia " + m);
 	}
 
 	@Override
 	public void eliminar(String nombre) {
 	// TODO Auto-generated method stub
-	System.out.println("se ha eliminado "+nombre);
+	System.out.println("se ha eliminado la materia "+nombre);
+}
 }

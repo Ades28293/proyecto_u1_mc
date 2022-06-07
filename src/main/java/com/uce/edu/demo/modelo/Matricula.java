@@ -27,5 +27,15 @@ public class Matricula {
 	public void setMateria(List<Materia> materia) {
 		this.materia = materia;
 	}
+	
+	//Metodo toString
+	@Override
+	public String toString() {
+		return "Matricula [numero=" + numero + ", estudiante=" + estudiante + ", materia=" + materia + "]";
+	}
+	
+	
+	
+	
 
 }
