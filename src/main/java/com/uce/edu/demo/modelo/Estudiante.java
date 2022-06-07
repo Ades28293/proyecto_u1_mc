@@ -2,9 +2,12 @@ package com.uce.edu.demo.modelo;
 
 public class Estudiante {
 	
+	
 	private String cedula;
 	private String nombre;
 	private String apellido;
+	
+	
 	
 	//Set y Get
 	public String getNombre() {
@@ -27,5 +30,9 @@ public class Estudiante {
 		this.cedula = cedula;
 	}
 	
-
+	//metodo toString
+	@Override
+	public String toString() {
+		return "Estudiante [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+	}
 }
