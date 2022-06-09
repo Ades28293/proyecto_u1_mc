@@ -36,6 +36,26 @@ public class DepositoServiceImpl implements IDepositoService{
 		this.depositoRepository.insertarDeposito(deposito);
 		
 	}
+
+	@Override
+	public Deposito buscarDeposito(String numeroCtaDestino) {
+		// TODO Auto-generated method stub
+		return this.depositoRepository.buscarDeposito(numeroCtaDestino);
+	}
+
+	@Override
+	public void actualizarDeposito(Deposito d) {
+		// TODO Auto-generated method stub
+		this.depositoRepository.actualizarDeposito(d);
+		
+	}
+
+	@Override
+	public void borrarDeposito(String numeroCtaDestino) {
+		// TODO Auto-generated method stub
+		this.depositoRepository.eliminarDeposito(numeroCtaDestino);
+		
+	}
 	
 
 }
