@@ -2,6 +2,7 @@ package com.uce.edu.demo.banco.service;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,6 +56,12 @@ public class DepositoServiceImpl implements IDepositoService{
 		// TODO Auto-generated method stub
 		this.depositoRepository.eliminarDeposito(numeroCtaDestino);
 		
+	}
+
+	@Override
+	public List<Deposito> consultar(String cuenta, LocalDateTime fechaInicio, LocalDateTime fechaFin) {
+		// TODO Auto-generated method stub
+		return this.depositoRepository.consultar(cuenta, fechaInicio, fechaFin);
 	}
 	
 
