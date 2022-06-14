@@ -52,7 +52,6 @@ public class TransferenciaRepositoryImpl implements ITransferenciaRepository{
 		trans1.setMontoTransferir(new BigDecimal(100));
 		trans1.setNumeroCuentaDestino("1234");
 		trans1.setNumeroCuentaOrigen("12567");
-		
 		listaConsultada.add(trans1);
 		
 		
