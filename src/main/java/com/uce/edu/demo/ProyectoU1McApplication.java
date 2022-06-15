@@ -1,40 +1,34 @@
 package com.uce.edu.demo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.uce.edu.demo.modelo.Estudiante;
-import com.uce.edu.demo.modelo.Materia;
-import com.uce.edu.demo.modelo.Matricula;
-import com.uce.edu.demo.modelo.ProfesorGeneral;
-import com.uce.edu.demo.modelo.ProfesorMateria;
-import com.uce.edu.demo.service.IMatriculaService;
+import com.uce.edu.demo.aeropuerto.modelo.PilotoGeneral;
+import com.uce.edu.demo.aeropuerto.modelo.PilotoPrivado;
+import com.uce.edu.demo.aeropuerto.modelo.RegistroVuelos;
+import com.uce.edu.demo.aeropuerto.modelo.Vuelos;
+import com.uce.edu.demo.aeropuerto.service.IRegistroVuelosService;
 
 @SpringBootApplication
 public class ProyectoU1McApplication implements CommandLineRunner {
 
 	// inyeccion
 	@Autowired
-	private ProfesorGeneral general;
-	
-	
+	private PilotoGeneral pilotoGeneral1;
+
 	@Autowired
-	private ProfesorGeneral general1;
-	
+	private PilotoGeneral pilotoGeneral2;
+
 	@Autowired
-	private ProfesorMateria materia1;
-	
+	private PilotoPrivado pilotoPrivado1;
+
 	@Autowired
-	private ProfesorMateria materia2;
-	
+	private PilotoPrivado pilotoPrivado2;
+
 	@Autowired
-	private IMatriculaService iMatriculaService;
-	
+	private IRegistroVuelosService iRegistroVuelosService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU1McApplication.class, args);
@@ -43,37 +37,34 @@ public class ProyectoU1McApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-System.out.println("EJEMPLO SINGLETON");
-		this.general.setNombre("Michael");
-		this.general.setApellido("Cen");
-		
-		System.out.println(this.general);
+		System.out.println("EJEMPLO SINGLETON");
+
+		this.pilotoGeneral1.setNombre("Michael");
+		this.pilotoGeneral1.setApellido("Cen");
+
+		System.out.println(this.pilotoGeneral1);
 		System.out.println("--------------------------------------------");
-		System.out.println(this.general1);
-		this.general1.setNombre("Pepito");
+		System.out.println(this.pilotoGeneral2);
+		this.pilotoGeneral1.setNombre("Juan");
 		System.out.println("--------------------------------------------");
-		
-		
-		System.out.println(this.general);
+
+		System.out.println(this.pilotoGeneral1);
 		System.out.println("------------------------------------------");
-		System.out.println(this.general1);
-		
+		System.out.println(this.pilotoGeneral2);
+
 		System.out.println("EJEMPLO PROTOTYPE");
-		this.materia1.setNombre("Daniel");
-		this.materia1.setApellido("Teran");
-		System.out.println(this.materia1);
-		
-		System.out.println(this.materia2);
-		
-		Matricula matricula1=new Matricula();
-		matricula1.setEstudiante(new Estudiante());
-		matricula1.setMateria(new ArrayList<Materia>());
-		matricula1.setNumero("123154");
-		
-		this.iMatriculaService.insertar(matricula1);
-		
-		
-		
+		this.pilotoPrivado1.setNombre("Daniel");
+		this.pilotoPrivado1.setApellido("Teran");
+		System.out.println(this.pilotoPrivado1);
+
+		System.out.println(this.pilotoPrivado2);
+
+		RegistroVuelos rVuelo1 = new RegistroVuelos();
+		rVuelo1.setNumVuelo("13215");
+		rVuelo1.setVuelo(new Vuelos());
+
+		this.iRegistroVuelosService.insertar(rVuelo1);
+
 	}
 
 }
